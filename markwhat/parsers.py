@@ -26,6 +26,20 @@ def parse_markdown(text, args=''):
     else:
         safe_mode = False
 
+    extensions.extend([
+        'extra',
+        'admonition',
+        'codehilite',
+        'headerid',
+        'meta',
+        'nl2br',
+        'sane_lists',
+        'smarty',
+        'toc',
+        'wikilinks',
+        'tables',
+    ])
+
     return markdown(
         text,
         extensions,
